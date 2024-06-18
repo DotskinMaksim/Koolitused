@@ -1,0 +1,36 @@
+﻿﻿@model Koolitused.Models.Kursus
+
+@{
+    ViewBag.Title = "Kustuta registratsioon";
+}
+
+<h2>Delete Registration</h2>
+
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+<div>
+    <h4>Kursus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Laps.LapseEesnimi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Laps.LapseEesnimi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Koolitus.Koolitusenimetus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Koolitus.Koolitusenimetus)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Kustuta" class="btn btn-default" /> |
+            @Html.ActionLink("Tagasi", "Kursus")
+        </div>
+    }
+</div>

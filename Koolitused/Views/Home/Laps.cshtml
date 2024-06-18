@@ -1,0 +1,45 @@
+﻿﻿﻿@model IEnumerable<Koolitused.Models.Laps>
+
+@{
+    ViewBag.Title = "Lapsed";
+}
+
+<h2>Lapsed</h2>
+
+<p>
+    @Html.ActionLink("Loo uus", "laps_Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LapseEesnimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LapsePerenimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sunniaasta)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LapseEesnimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LapsePerenimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sunniaasta)
+            </td>
+            <td>
+                @Html.ActionLink("Muuda", "laps_Edit", new { id = item.Id }) |
+                @Html.ActionLink("Kustuta", "laps_Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

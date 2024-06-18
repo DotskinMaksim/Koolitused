@@ -1,0 +1,49 @@
+﻿﻿﻿@model Koolitused.Models.Opetaja
+
+@{
+    ViewBag.Title = "Kustuta";
+}
+
+<h2>Kustuta</h2>
+
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+<div>
+    <h4>Opetaja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OpetajaEesnimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpetajaEesnimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpetajaPerenimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpetajaPerenimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefon)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Kustuta" class="btn btn-default" /> |
+            @Html.ActionLink("Tagasi", "Opetaja")
+        </div>
+    }
+</div>

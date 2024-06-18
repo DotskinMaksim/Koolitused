@@ -1,0 +1,98 @@
+﻿﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f8f9fa; /* Лёгкий фон для всей страницы */
+    font-family: Arial, sans-serif; /* Смена шрифта */
+    color: #333; /* Основной цвет текста */
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 10px; /* Расстояние между полями формы */
+}
+
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff;
+}
+
+/* Additional styling for the table */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #007bff; /* Синий цвет заголовков таблицы */
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:hover {
+        background-color: #ddd;
+    }
+
+    /* Styling for action links */
+    table a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        table a:hover {
+            text-decoration: underline;
+        }
+
+a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+    input[type="submit"]:hover {
+        background-color: cornflowerblue;
+    }

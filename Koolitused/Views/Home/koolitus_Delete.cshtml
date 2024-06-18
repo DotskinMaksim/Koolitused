@@ -1,0 +1,65 @@
+﻿﻿﻿@model Koolitused.Models.Koolitus
+
+@{
+    ViewBag.Title = "Kustuta";
+}
+
+<h2>Kustuta</h2>
+
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+<div>
+    <h4>Koolitus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Koolitusenimetus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Koolitusenimetus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Koolitusekirjeldus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Koolitusekirjeldus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpetajaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpetajaId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Koolitusehind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Koolitusehind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Koolitusemaht)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Koolitusemaht)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Kustuta" class="btn btn-default" /> |
+            @Html.ActionLink("Tagasi", "Koolitused")
+        </div>
+    }
+</div>
